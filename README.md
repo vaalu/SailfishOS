@@ -14,3 +14,8 @@ But there are licencing and obligations, coz of which I just left it to the user
   * After accepting the rss feed channel: 
     * The corresponding RSS Feed will be added to the local device storage
     * Using the device's own SQLite storage.
+
+![Jeani News Bites Home](assets/jeaninewsbites/JeaniNewsBites_000.PNG) | ![Jeani News Bites Opening](assets/jeaninewsbites/JeaniNewsBites_000_1.PNG)
+![Jeani News Bites Home](assets/jeaninewsbites/JeaniNewsBites_001.PNG) | ![Jeani News Bites Opening](assets/jeaninewsbites/JeaniNewsBites_002.PNG)
+![Jeani News Bites Home](assets/jeaninewsbites/JeaniNewsBites_003.PNG) | ![Jeani News Bites Opening](assets/jeaninewsbites/JeaniNewsBites_004.PNG)
+![Jeani News Bites Home](assets/jeaninewsbites/JeaniNewsBites_005.PNG) | ![Jeani News Bites Opening](assets/jeaninewsbites/JeaniNewsBites_006.PNG)
