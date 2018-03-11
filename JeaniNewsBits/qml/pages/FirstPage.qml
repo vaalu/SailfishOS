@@ -43,7 +43,9 @@ Page {
                 }
                 MenuItem {
                     text: qsTr("Manage Channels")
-                    onClicked: pageStack.push(Qt.resolvedUrl("EditChannels.qml"))
+                    onClicked: function() {
+                        var editPage = pageStack.push(Qt.resolvedUrl("EditChannels.qml"))
+                    }
                 }
             }
             PushUpMenu {
@@ -86,6 +88,13 @@ Page {
                 SectionHeader {
                     text: "Headlines"
                 }
+
+                ViewPlaceholder {
+                    enabled: feedsListRep.count == 0
+                    text: "No Channels Added"
+                    hintText: "Pull down to add channel"
+                }
+
                 ExpandingSectionGroup {
                     currentIndex: 0
 
@@ -122,9 +131,16 @@ Page {
                                         id: newsFeedDetail
                                         Component.onCompleted: {
                                             var feedData = DB.getRssNews(model.url)
+                                            /*
+                                            if (!(feedData) || feedData.length < 1) {
+                                                page.addFeedData(newsFeedDetail, "News channels are not present \nPull down to add a channel");
+                                            }
+                                            */
+
                                             for (var p = 0; p < feedData.length; p++) {
                                                 page.addFeedData(newsFeedDetail, feedData[p]);
                                                 //console.log("Returned " + feedData[p]);
+                                                console.log("Returned " + channelsListModel.hasChildren(this))
                                             };
                                         }
                                     }
